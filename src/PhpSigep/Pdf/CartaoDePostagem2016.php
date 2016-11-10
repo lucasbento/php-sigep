@@ -226,8 +226,8 @@ class CartaoDePostagem2016
                 $tPosChancela = 1;
 
                 $servicoDePostagem = $objetoPostal->getServicoDePostagem();
-                $nomeRemetente = $this->plp->getRemetente()->getNome();
                 $accessData = $this->plp->getAccessData();
+                $nomeRemetente = $accessData->getRazaoSocial();
 
                 switch ($servicoDePostagem->getCodigo()) {
                     case ServicoDePostagem::SERVICE_PAC_41068:

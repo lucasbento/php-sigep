@@ -41,6 +41,10 @@ class AccessData extends AbstractModel
      * @var Diretoria
      */
     protected $diretoria;
+    /**
+     * @var string
+     */
+    protected $razaoSocial;
 
     /**
      * @return string
@@ -160,6 +164,22 @@ class AccessData extends AbstractModel
     public function getDiretoria()
     {
         return $this->diretoria;
+    }
+
+    /**
+     * @param string $razaoSocial
+     */
+    public function setRazaoSocial($razaoSocial)
+    {
+        $this->razaoSocial = $razaoSocial;
+    }
+
+    /**
+     * @return string
+     */
+    public function getRazaoSocial()
+    {
+        return $this->razaoSocial;
     }
 
     /**

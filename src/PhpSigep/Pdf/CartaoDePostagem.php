@@ -227,8 +227,8 @@ class CartaoDePostagem
                 $tPosChancela = $this->pdf->GetY();
 
                 $servicoDePostagem = $objetoPostal->getServicoDePostagem();
-                $nomeRemetente = $this->plp->getRemetente()->getNome();
                 $accessData = $this->plp->getAccessData();
+                $nomeRemetente = $accessData->getRazaoSocial();
 
                 switch ($servicoDePostagem->getCodigo()) {
                     case ServicoDePostagem::SERVICE_PAC_41068:
@@ -366,7 +366,7 @@ class CartaoDePostagem
                 );
 
                 // Nome legivel, doc e rubrica
-                // 
+                //
                 $this->pdf->SetFontSize(7);
                 $this->pdf->SetXY(1, $this->pdf->GetY() + 23);
                 $this->t(0, 'Nome Legível:___________________________________________',1, 'L',  null);
